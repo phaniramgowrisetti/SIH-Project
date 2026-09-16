@@ -79,7 +79,7 @@ export default function CitizenAIUnderstandingView() {
   return (
     <main className="flex-grow py-3 sm:py-4 px-4 md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col items-center justify-start text-on-surface">
       <div className="w-full max-w-[620px] mx-auto flex-grow flex flex-col items-center justify-start space-y-3">
-        
+
         {/* 1. Header & Back Navigation */}
         <div className="w-full flex items-center justify-between">
           <button
@@ -257,8 +257,8 @@ export default function CitizenAIUnderstandingView() {
                       {understanding.provider === 'groq'
                         ? 'Meta Llama 3.3 70B (Groq LPU)'
                         : understanding.provider === 'gemini'
-                        ? 'Google Gemini 2.0 Flash'
-                        : 'Civic Intelligence NLP Engine'}
+                          ? 'Google Gemini 2.0 Flash'
+                          : 'Civic Intelligence NLP Engine'}
                     </strong>
                   </span>
                 </div>

@@ -7,7 +7,7 @@ const API_BASE = '/api'
 
 async function request(endpoint, options = {}) {
   const url = `${API_BASE}${endpoint}`
-  
+
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -17,12 +17,12 @@ async function request(endpoint, options = {}) {
   }
 
   const response = await fetch(url, config)
-  
+
   if (!response.ok) {
     const error = await response.json().catch(() => ({ message: response.statusText }))
     throw new Error(error.message || `API Error: ${response.status}`)
   }
-  
+
   return response.json()
 }
 
@@ -153,6 +153,6 @@ export const api = {
   sendUniversityRequests: (data) => request('/admin/university-requests', { method: 'POST', body: JSON.stringify(data) }),
   respondUniversityRequest: (data) => request('/admin/university-requests/respond', { method: 'POST', body: JSON.stringify(data) }),
   seedDemo: () => request('/admin/seed', { method: 'POST' }),
-  resetDemo: () => request('/admin/reset', { method: 'POST' }),
+  //   resetDemo: () => request('/admin/reset', { method: 'POST' }),
 }
 
